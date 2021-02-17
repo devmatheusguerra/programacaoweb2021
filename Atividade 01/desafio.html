@@ -1,0 +1,59 @@
+<script>
+    // Desafio: Faça um programa que dado um valor inteiro retorne o menor número de cédulas e moedas possível
+
+    var dinheiro = parseInt(prompt("Digite o valor"));
+
+    var c200 = c100 = c50 = c20 = c10 = c5 = c2 = c1 = 0;
+
+    c200 = parseInt(dinheiro / 200);
+    dinheiro %= 200;
+
+    c100 = parseInt(dinheiro / 100);
+    dinheiro %= 100;
+
+    c50 = parseInt(dinheiro / 50);
+    dinheiro %= 50;
+
+    c20 = parseInt(dinheiro / 20);
+    dinheiro %= 20;
+
+    c10 = parseInt(dinheiro / 10);
+    dinheiro %= 10;
+
+    c5 = parseInt(dinheiro / 5);
+    dinheiro %= 5;
+
+    c2 = parseInt(dinheiro / 2);
+    
+    c1 = dinheiro % 2;
+
+    console.table({
+        "cédula de 200" : c200,
+        "cédula de 100" : c100,
+        "cédula de 50" : c50,
+        "cédula de 20" : c20,
+        "cédula de 10" : c10,
+        "cédula de 5" : c5,
+        "cédula de 2" : c2,
+        "cédula de 1" : c1
+    })
+
+    /**
+    dinheiro => 389
+    c200 => 0 -> 1
+    dinheiro => 389 % 200 -> 189
+    c100 => 0 -> 1
+    dinheiro => 189 % 100 -> = 89
+    c50 => 0 -> 1
+    dinheiro => 89 % 50 -> 39
+    c20 => 0 -> 1
+    dinheiro => 39 % 20 -> 19
+    c10 => 0 -> 1
+    dinheiro => 19 % 10 -> 9
+    c5 => 0 -> 1
+    dinheiro => 9 % 5 -> 4
+    c2 => 0 -> 2
+    c1 => 0 -> 0
+    */
+
+</script>
