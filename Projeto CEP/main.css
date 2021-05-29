@@ -1,0 +1,173 @@
+* {
+  font-family: "Catamaran", sans-serif;
+  user-select: none;
+}
+
+body {
+  margin: 0;
+  background-color: blueviolet;
+  padding: 0;
+}
+
+#container {
+  background-color: blueviolet;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#container > div {
+  width: 50%;
+  max-width: 400px;
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#container > div > div {
+  width: 100%;
+}
+
+#container > div > div > h1 {
+  color: white;
+}
+
+#container > div > div > input {
+  font-size: 150%;
+  outline: 0;
+  padding: 5px 10px;
+  background-color: transparent;
+  border: solid 1px white;
+  border-radius: 5px;
+  width: 100%;
+  color: white;
+  font-weight: 600;
+}
+
+#container > div > button {
+  width: fit-content;
+  padding: 5px 50px;
+  border: solid 2px white;
+  background-color: transparent;
+  color: white;
+  border-radius: 8px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+span {
+  align-self: flex-end;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: bolder;
+  opacity: 0;
+}
+
+#loader {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  display: none;
+}
+
+#loader > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h3 {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#msg {
+  transition: all 0.5s;
+}
+
+h1 {
+  font-size: large;
+}
+
+#fields {
+  position: fixed;
+  background-color: blueviolet;
+  width: 100vw;
+  height: 100vh;
+  transition: all 0.8s;
+  top: 101vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+}
+
+p {
+  margin: 0;
+}
+
+#geral > div {
+  width: 100%;
+  margin-top: 25px;
+}
+
+#especifico > div {
+  width: 100%;
+  margin-top: 25px;
+}
+
+.dual {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: fit-content !important;
+}
+
+input {
+  outline: 0;
+}
+
+.data {
+  opacity: 1;
+  color: white;
+  font-weight: bolder;
+}
+
+.btn_change {
+  background-color: transparent;
+  color: white;
+  border: 0;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#especifico {
+  display: none;
+}
+
+#especifico > button,
+#geral > button {
+  width: fit-content;
+  padding: 5px 20px;
+  border: solid 2px white;
+  background-color: transparent;
+  color: white;
+  border-radius: 8px;
+  margin-top: 20px;
+  cursor: pointer;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}

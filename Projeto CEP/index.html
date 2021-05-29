@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de CEP</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- FIELDS -->
+    <div id="fields">
+        <div id="geral">
+            <p>CEP: <span class="data" id="data_cep_geral"></span> <button class="btn_change"><i class="fa fa-map-marker"></i> Mudar cep</button></p>
+            <div class="dual">
+                <div style="width: 65%;">
+                    <p>Rua</p>
+                    <input style="width: 100%;"  id="data_rua_geral" type="text">
+                </div>
+                <div style="width: 20%;">
+                    <p>Número</p>
+                    <input style="width: 100%;"  id="data_numero_geral" type="text">
+                </div>
+            </div>
+            <div class="dual">
+                <div style="width: 47%;">
+                    <p>Bairro</p>
+                    <input style="width: 100%;"  id="data_bairro_geral" type="text">
+                </div>
+                <div style="width: 47%;">
+                    <p>Complemento</p>
+                    <input style="width: 100%;"  id="data_complemento_geral" type="text">
+                </div>
+            </div>
+            
+            <p>Local: <span class="data" id="data_cidade_geral"></span>, <span class="data" id="data_uf_geral"></span></p>
+           
+            <button>Salvar</button>
+        </div>
+        <div id="especifico">
+            <p>CEP: <span class="data" id="data_cep_especifico">62.700-000</span> <button class="btn_change"><i class="fa fa-map-marker"></i> Mudar cep</button></p>
+            <p>Rua: <span class="data" id="data_rua_especifico">Rua Costa Barros</span></p>
+            <div style="width: 100%">
+                <p>Número</p>
+                <input id="data_numero_especifico" style="width: 60%;" type="text">
+            </div>
+
+            <p>Bairro: <span class="data" id="data_bairro_especifico">Centro</span></p>
+            <div style="width: 100%">
+                <p>Complemento</p>
+                <input  id="data_complemento_especifico" style="width: 100%;" type="text">
+            </div>
+            <p>Local: <span class="data" id="data_cidade_especifico">Fortaleza</span>, <span class="data" id="data_uf_especifico">CE</span></p>
+            <button>Salvar</button>
+        </div>
+    </div>
+    <!-- LOADER -->
+    <div id="loader">
+        <div>
+            <img src="./loader.gif" style="width: 100px;">
+            <h3>Carregando...</h3>
+        </div>
+    </div>
+    <div id="container">
+        <div>
+            <div>
+                <h1>Digite seu CEP:</h1>
+            </div>
+            <div style="width:100%;display:flex;flex-direction:column;align-items:center">
+                <input autocomplete="off" id="cep" type="tel">
+                <span id="msg">Cep não encontrado</span>
+            </div>
+            
+            <button id="btn"> Buscar </button>
+        </div>
+
+    </div>
+
+    <script src="./main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous"></script>
+    <script>
+        $('#cep').mask("00.000-000");
+    </script>
+</body>
+</html>
